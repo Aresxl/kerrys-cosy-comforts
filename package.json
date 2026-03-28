@@ -1,17 +1,11 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
+  "name": "kerrys-cosy-comforts",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^6.1.1"
+    "dev:web": "npm run dev --workspace=web",
+    "dev:studio": "npm run dev --workspace=studio"
   }
 }

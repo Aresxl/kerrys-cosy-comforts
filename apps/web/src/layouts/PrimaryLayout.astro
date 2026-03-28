@@ -1,0 +1,25 @@
+---
+import Header from "@/components/sections/Header.astro";
+import Footer from "@/components/sections/Footer.astro";
+import MetaHead from "./MetaHead.astro";
+
+import "@/styles/global.css";
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <MetaHead title={title} description={description} />
+  <body>
+    <a href="#main" class="skip-to-main">Skip to main content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import "@/script/global.js";
+    </script>
+  </body>
+</html>
